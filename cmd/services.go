@@ -1,40 +1,48 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
 	"fmt"
 
+	"github.com/bahamas0x00/kctl/pkg/common"
+	"github.com/bahamas0x00/kctl/pkg/services"
 	"github.com/spf13/cobra"
 )
 
-// servicesCmd represents the services command
-var servicesCmd = &cobra.Command{
+var servicesGetCmd = &cobra.Command{
 	Use:   "services",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Get services",
+	Long:  `Get services or services in a workspace`,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		var resp *common.HttpResponse
+		var err error
+		if common.IsStringSet(workspace) {
+			resp, err = services.ListAllServicesInWorkspace(apiEndpoint, workspace)
+		} else {
+			resp, err = services.ListAllServices(apiEndpoint)
+		}
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("services called")
+		if err != nil {
+			return fmt.Errorf("failed to get services: %v", err)
+		}
+
+		// if output flag is set , write the content to file
+		if common.IsStringSet(output) {
+			err := common.SaveResponseToFile(resp, output)
+			if err != nil {
+				return fmt.Errorf("failed to write to file: %v", err)
+			}
+		} else {
+			// 如果没有设置 output 参数，则打印到控制台
+			fmt.Printf("Response:\n%s", resp.Body)
+		}
+
+		return nil
 	},
 }
 
 func init() {
-	getCmd.AddCommand(servicesCmd)
 
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// servicesCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// servicesCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

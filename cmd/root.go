@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var apiEndpoint string
+var apiEndpoint, workspace, read, output string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -31,14 +31,10 @@ func Execute() {
 }
 
 func init() {
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
-	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	// rootCmd.PersistentFlags().StringVarP(&serviceName, "service", "s", "", "use -s to set the service name ")
-	// rootCmd.PersistentFlags().StringVarP(&workspace, "workspace", "w", "default", "use -w to set the workspace name")
-	rootCmd.PersistentFlags().StringVarP(&apiEndpoint, "api", "i", "http://localhost:8001", "use -i to set the api endpoint")
-
+	rootCmd.AddCommand(getCmd)
+	rootCmd.AddCommand(createCmd)
+	rootCmd.PersistentFlags().StringVarP(&apiEndpoint, "api", "i", "http://localhost:8001", "Use -i to set the api endpoint")
+	rootCmd.PersistentFlags().StringVarP(&workspace, "workspace", "w", "", "Set the workspace")
+	rootCmd.PersistentFlags().StringVarP(&read, "read", "r", "", "Read from file (json)")
+	rootCmd.PersistentFlags().StringVarP(&output, "output", "o", "", "Output to file ")
 }
