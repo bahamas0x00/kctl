@@ -12,20 +12,13 @@ type Route struct {
 	Service ServiceID `json:"service"`
 }
 
-type Data struct {
-	Routes []Route `json:"routes"`
-}
-
-type RoutesResponse struct {
-	Data   []Data `json:"data"`
-	Offset string `json:"offset"`
+type Routes struct {
+	Data   []Route `json:"data"`
+	Offset string  `json:"offset"`
 }
 
 // list all routes associated with a service in a workspace
-func ListAllRoutesAssociatedWithServiceInworkspace(service, workspace string) (RoutesResponse, error) {
-	//TODO
-	return nil, nil
-}
+func ListAllRoutesAssociatedWithServiceInworkspace(service, workspace string) (Routes, error)
 
 // create a new route associated with a service in a workspace
 func (r *Route) CreateNewRouteAssociatedWithServiceInWorkspace(service, workspace string) error {

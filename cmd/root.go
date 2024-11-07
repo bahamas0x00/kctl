@@ -9,6 +9,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var apiEndpoint string
+
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "kctl",
@@ -34,6 +36,9 @@ func init() {
 	// will be global for your application.
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// rootCmd.PersistentFlags().StringVarP(&serviceName, "service", "s", "", "use -s to set the service name ")
+	// rootCmd.PersistentFlags().StringVarP(&workspace, "workspace", "w", "default", "use -w to set the workspace name")
+	rootCmd.PersistentFlags().StringVarP(&apiEndpoint, "api", "i", "http://localhost:8001", "use -i to set the api endpoint")
 
 }
