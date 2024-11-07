@@ -43,6 +43,16 @@ var servicesGetCmd = &cobra.Command{
 	},
 }
 
+var servicesCreateCmd = &cobra.Command{
+	Use:   "services",
+	Short: "Create services",
+	Long:  `Create services or services in a workspace`,
+	RunE: func(cmd *cobra.Command, args []string) error {
+
+		return nil
+	},
+}
+
 func init() {
 
 }

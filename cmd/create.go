@@ -20,5 +20,7 @@ var createCmd = &cobra.Command{
 }
 
 func init() {
+	createCmd.AddCommand(routesCreateCmd)
+	createCmd.AddCommand(servicesCreateCmd)
 
 }
