@@ -9,7 +9,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// createCmd represents the create command
+var read string
+
 var createCmd = &cobra.Command{
 	Use:   "create",
 	Short: "Create resources (services, routes)",
@@ -22,5 +23,6 @@ var createCmd = &cobra.Command{
 func init() {
 	createCmd.AddCommand(routesCreateCmd)
 	createCmd.AddCommand(servicesCreateCmd)
+	createCmd.PersistentFlags().StringVarP(&read, "read", "r", "", "Read from file (json)")
 
 }

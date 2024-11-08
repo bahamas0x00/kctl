@@ -117,3 +117,14 @@ func SaveResponseToFile(response *HttpResponse, outputFile string) error {
 	fmt.Println("HTTP 响应状态码:", response.StatusCode)
 	return nil
 }
+
+
+
+// Convert a slice of any struct type to a slice of pointers to those structs
+func ConvertToPointers[T any](data []T) []*T {
+	pointers := make([]*T, len(data))
+	for i := range data {
+		pointers[i] = &data[i]
+	}
+	return pointers
+}
