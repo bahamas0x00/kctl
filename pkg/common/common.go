@@ -77,24 +77,6 @@ func SendRequest(method, apiEndpoint string, pathComponents []string, data inter
 	}, nil
 }
 
-// ReadJsonFromFile read data fron json file and send request
-func ReadJsonFromFileAndSendRequest(method, apiEndpoint string, pathComponents []string, filePath string) (*HttpResponse, error) {
-	// 读取 JSON 文件
-	fileContent, err := os.ReadFile(filePath)
-	if err != nil {
-		return nil, fmt.Errorf("error reading file %s: %v", filePath, err)
-	}
-
-	// 将文件内容解析成适当的格式，假设文件内容就是我们想要发送的 JSON 数据
-	var jsonData interface{}
-	if err := json.Unmarshal(fileContent, &jsonData); err != nil {
-		return nil, fmt.Errorf("error unmarshaling file content: %v", err)
-	}
-
-	// 发送请求
-	return SendRequest(method, apiEndpoint, pathComponents, jsonData)
-}
-
 func IsStringSet(s string) bool {
 	return s != ""
 }
@@ -117,8 +99,6 @@ func SaveResponseToFile(response *HttpResponse, outputFile string) error {
 	fmt.Println("HTTP 响应状态码:", response.StatusCode)
 	return nil
 }
-
-
 
 // Convert a slice of any struct type to a slice of pointers to those structs
 func ConvertToPointers[T any](data []T) []*T {

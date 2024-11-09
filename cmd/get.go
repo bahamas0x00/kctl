@@ -11,10 +11,10 @@ import (
 
 var getCmd = &cobra.Command{
 	Use:   "get",
-	Short: "Get resources (services, routes)",
-	Long:  `Use kctl get services or kctl get routes to fetch resources.`,
+	Short: "Get resources (services, routes...)",
+	Long:  `Get resources (services, routes...)`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("get called")
+		fmt.Println("choose resources ")
 	},
 }
 

@@ -13,10 +13,10 @@ var read string
 
 var createCmd = &cobra.Command{
 	Use:   "create",
-	Short: "Create resources (services, routes)",
-	Long:  `Use kctl create services or kctl create routes to create resources.`,
+	Short: "Create resources (services, routes...)",
+	Long:  `Create resources (services, routes...)`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("create called")
+		fmt.Println("choose resources ")
 	},
 }
 

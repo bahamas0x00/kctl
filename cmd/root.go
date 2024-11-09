@@ -28,6 +28,8 @@ func Execute() {
 func init() {
 	rootCmd.AddCommand(getCmd)
 	rootCmd.AddCommand(createCmd)
+	rootCmd.AddCommand(updateCmd)
+	rootCmd.AddCommand(deleteCmd)
 	rootCmd.PersistentFlags().StringVarP(&apiEndpoint, "api", "i", "http://localhost:8001", "Use -i to set the api endpoint")
 	rootCmd.PersistentFlags().StringVarP(&workspace, "workspace", "w", "", "Set the workspace")
 	rootCmd.PersistentFlags().StringVarP(&output, "output", "o", "", "Output to file ")

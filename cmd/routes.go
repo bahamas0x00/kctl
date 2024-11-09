@@ -25,6 +25,24 @@ var routesCreateCmd = &cobra.Command{
 	},
 }
 
+var routesDeleteCmd = &cobra.Command{
+	Use:   "routes",
+	Short: "Delete routes",
+	Long:  `Delete routes`,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return nil
+	},
+}
+
+var routesUpdateCmd = &cobra.Command{
+	Use:   "routes",
+	Short: "Update routes",
+	Long:  `Update routes`,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return nil
+	},
+}
+
 func init() {
 
 }
