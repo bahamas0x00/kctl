@@ -6,6 +6,7 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"os"
 
 	"github.com/bahamas0x00/kctl/pkg/common"
@@ -25,13 +26,11 @@ var servicesGetCmd = &cobra.Command{
 	Short: "Get services",
 	Long:  `Get services or services in a workspace`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		var resp *common.HttpResponse
-		var err error
-
-		resp, err = services.ListAllServices(apiEndpoint, workspace)
+		resp, err := services.ListAllServices(apiEndpoint, workspace)
 		if err != nil {
 			return fmt.Errorf("failed to get services: %v", err)
 		}
+		defer resp.Body.Close()
 
 		// if output flag is set , write the content to file
 		if common.IsStringSet(output) {
@@ -41,7 +40,12 @@ var servicesGetCmd = &cobra.Command{
 			}
 		} else {
 			// 如果没有设置 output 参数，则打印到控制台
-			fmt.Printf("Response:\n%s", resp.Body)
+			data, err := io.ReadAll(resp.Body)
+			if err != nil {
+				return fmt.Errorf("failed to read data: %v", err)
+			}
+			fmt.Printf("Code: %s\n", resp.Status)
+			fmt.Printf("Response:\n%s\n", string(data))
 		}
 
 		return err
@@ -76,7 +80,13 @@ var servicesCreateCmd = &cobra.Command{
 				}
 			} else {
 				for _, resp := range responses {
-					fmt.Printf("Create with code:%d\n", resp.StatusCode)
+					defer resp.Body.Close()
+					body, err := io.ReadAll(resp.Body)
+					if err != nil {
+						fmt.Printf("failed to read body: %v", err)
+					}
+					fmt.Printf("Code: %s\n", resp.Status)
+					fmt.Printf("Response:\n%s\n", string(body))
 				}
 			}
 

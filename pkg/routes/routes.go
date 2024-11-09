@@ -2,9 +2,8 @@ package routes
 
 import (
 	"fmt"
+	"net/http"
 	"sync"
-
-	"github.com/bahamas0x00/kctl/pkg/common"
 )
 
 // ServiceID represents the Service ID structure in Kong API
@@ -46,7 +45,7 @@ var pathComponents []string
 // 2. all routes in a workspace 								/{workspace}/routes
 // 3. all routes associated with a service 						/services/{serviceName}/routes
 // 4. all routes 												/routes
-func ListAllRoutes(apiEndpoint, workspace string, serviceName string) (*common.HttpResponse, error) {
+func ListAllRoutes(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
 	return nil, nil
 }
 
@@ -55,7 +54,7 @@ func ListAllRoutes(apiEndpoint, workspace string, serviceName string) (*common.H
 // 2. a route in a workspace 									/{workspace}/routes
 // 3. a route associated with a service 						/services/{serviceName}/routes
 // 4. a route 													/routes
-func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (*common.HttpResponse, error) {
+func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
 
 	return nil, nil
 }
@@ -65,7 +64,7 @@ func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (
 // 2. a route associated with a service							/services/{serviceName}/routes/{routeName}
 // 3. a route in a workspace									/{workspace}/routes/{routeName}
 // 4. a route associated with a service in a workspace			/{workspace}/services/{serviceName}/routes/{routeName}
-func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (*common.HttpResponse, error) {
+func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
 
 	return nil, nil
 }
@@ -75,32 +74,32 @@ func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (
 // 2. a route associated with a service							/services/{serviceName}/routes/{routeName}
 // 3. a route in a workspace									/{workspace}/routes/{routeName}
 // 4. a route associated with a service in a workspace			/{workspace}/services/{serviceName}/routes/{routeName}
-func (r *Route) UpdateRoute(apiEndpoint, workspace string, serviceName string) (*common.HttpResponse, error) {
+func (r *Route) UpdateRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
 	return nil, nil
 }
 
 // batch create
-func (r *Routes) BatchCreateRoutes(apiEndpoint, workspace string, serviceName string) ([]*common.HttpResponse, []error) {
+func (r *Routes) BatchCreateRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
 	return nil, nil
 }
 
 // batch delete
-func (r *Routes) BatchDeleteServices(apiEndpoint, workspace string, serviceName string) ([]*common.HttpResponse, []error) {
+func (r *Routes) BatchDeleteServices(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
 	return nil, nil
 }
 
 // batch update
-func (r *Routes) BatchUpdateServices(apiEndpoint, workspace string, serviceName string) ([]*common.HttpResponse, []error) {
+func (r *Routes) BatchUpdateServices(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
 	return nil, nil
 }
 
-func batchExcuteRoutes(apiEndpoint string, workspace string, serviceName string, routes []*Route, operation string) ([]*common.HttpResponse, []error) {
+func batchExcuteRoutes(apiEndpoint string, workspace string, serviceName string, routes []*Route, operation string) ([]*http.Response, []error) {
 	var wg sync.WaitGroup
-	var responses []*common.HttpResponse
+	var responses []*http.Response
 	var errs []error
 
 	ch := make(chan struct {
-		response *common.HttpResponse
+		response *http.Response
 		err      error
 	}, len(routes))
 
@@ -108,7 +107,7 @@ func batchExcuteRoutes(apiEndpoint string, workspace string, serviceName string,
 		wg.Add(1)
 		go func(route *Route) {
 			defer wg.Done()
-			var resp *common.HttpResponse
+			var resp *http.Response
 			var err error
 
 			switch operation {
@@ -123,7 +122,7 @@ func batchExcuteRoutes(apiEndpoint string, workspace string, serviceName string,
 			}
 
 			ch <- struct {
-				response *common.HttpResponse
+				response *http.Response
 				err      error
 			}{response: resp, err: err}
 		}(route)

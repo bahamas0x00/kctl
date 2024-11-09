@@ -2,11 +2,37 @@ package services
 
 import (
 	"fmt"
+	"net/http"
 	"sync"
 
 	"github.com/bahamas0x00/kctl/pkg/common"
 )
 
+/*
+{
+  "name": "my-service",
+  "retries": 5,
+  "protocol": "http",
+  "host": "example.com",
+  "port": 80,
+  "path": "/some_api",
+  "connect_timeout": 6000,
+  "write_timeout": 6000,
+  "read_timeout": 6000,
+  "tags": [
+    "user-level"
+  ],
+  "client_certificate": {
+    "id": "4e3ad2e4-0bc4-4638-8e34-c84a417ba39b"
+  },
+  "tls_verify": true,
+  "tls_verify_depth": null,
+  "ca_certificates": [
+    "4e3ad2e4-0bc4-4638-8e34-c84a417ba39b"
+  ],
+  "enabled": true
+}
+*/
 // Service represents a single service in Kong Gateway.
 type Service struct {
 	Name              string   `json:"name"`            // Service name
@@ -40,7 +66,7 @@ var pathComponents []string
 // list
 // 1. all services 								/services
 // 2. all services in a workspace				/{workspace}/services
-func ListAllServices(apiEndpoint, workspace string) (*common.HttpResponse, error) {
+func ListAllServices(apiEndpoint, workspace string) (*http.Response, error) {
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services")
 	} else {
@@ -52,7 +78,7 @@ func ListAllServices(apiEndpoint, workspace string) (*common.HttpResponse, error
 // create
 // 1. a service									/services
 // 2. a service in a workspace					/{workspace}/services
-func (s *Service) CreateService(apiEndpoint, workspace string) (*common.HttpResponse, error) {
+func (s *Service) CreateService(apiEndpoint, workspace string) (*http.Response, error) {
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services")
 	} else {
@@ -64,7 +90,7 @@ func (s *Service) CreateService(apiEndpoint, workspace string) (*common.HttpResp
 // delete
 // 1. a service									/services/{service_name}
 // 2. a service in a workspace					/{workspace}/services/{service_name}
-func (s *Service) DeleteService(apiEndpoint, workspace string) (*common.HttpResponse, error) {
+func (s *Service) DeleteService(apiEndpoint, workspace string) (*http.Response, error) {
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services", s.Name)
 	} else {
@@ -76,7 +102,7 @@ func (s *Service) DeleteService(apiEndpoint, workspace string) (*common.HttpResp
 // update a service or update a service in a workspace
 // 1. a service									/services/{serviceName}
 // 2. a service in a workspace					/{workspace}/services/{serviceName}
-func (s *Service) UpdateService(apiEndpoint, workspace string) (*common.HttpResponse, error) {
+func (s *Service) UpdateService(apiEndpoint, workspace string) (*http.Response, error) {
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services", s.Name)
 	} else {
@@ -86,30 +112,30 @@ func (s *Service) UpdateService(apiEndpoint, workspace string) (*common.HttpResp
 }
 
 // batch create services
-func (s *Services) BatchCreateServices(apiEndpoint, workspace string) ([]*common.HttpResponse, []error) {
+func (s *Services) BatchCreateServices(apiEndpoint, workspace string) ([]*http.Response, []error) {
 	services := common.ConvertToPointers(s.Data)
 	return batchExcuteServices(apiEndpoint, workspace, services, "create")
 }
 
 // batch delete services
-func (s *Services) BatchDeleteServices(apiEndpoint, workspace string) ([]*common.HttpResponse, []error) {
+func (s *Services) BatchDeleteServices(apiEndpoint, workspace string) ([]*http.Response, []error) {
 	services := common.ConvertToPointers(s.Data)
 	return batchExcuteServices(apiEndpoint, workspace, services, "delete")
 }
 
 // batch update services
-func (s *Services) BatchUpdateServices(apiEndpoint, workspace string) ([]*common.HttpResponse, []error) {
+func (s *Services) BatchUpdateServices(apiEndpoint, workspace string) ([]*http.Response, []error) {
 	services := common.ConvertToPointers(s.Data)
 	return batchExcuteServices(apiEndpoint, workspace, services, "update")
 }
 
-func batchExcuteServices(apiEndpoint string, workspace string, services []*Service, operation string) ([]*common.HttpResponse, []error) {
+func batchExcuteServices(apiEndpoint string, workspace string, services []*Service, operation string) ([]*http.Response, []error) {
 	var wg sync.WaitGroup
-	var responses []*common.HttpResponse
+	var responses []*http.Response
 	var errs []error
 
 	ch := make(chan struct {
-		response *common.HttpResponse
+		response *http.Response
 		err      error
 	}, len(services))
 
@@ -117,7 +143,7 @@ func batchExcuteServices(apiEndpoint string, workspace string, services []*Servi
 		wg.Add(1)
 		go func(service *Service) {
 			defer wg.Done()
-			var resp *common.HttpResponse
+			var resp *http.Response
 			var err error
 
 			switch operation {
@@ -132,7 +158,7 @@ func batchExcuteServices(apiEndpoint string, workspace string, services []*Servi
 			}
 
 			ch <- struct {
-				response *common.HttpResponse
+				response *http.Response
 				err      error
 			}{response: resp, err: err}
 		}(service)

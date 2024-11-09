@@ -13,12 +13,6 @@ import (
 	"time"
 )
 
-type HttpResponse struct {
-	StatusCode int
-	Headers    map[string][]string
-	Body       io.Reader
-}
-
 var once sync.Once
 var client *http.Client
 
@@ -38,7 +32,7 @@ func getClient() *http.Client {
 }
 
 // common request sender
-func SendRequest(method, apiEndpoint string, pathComponents []string, data interface{}) (*HttpResponse, error) {
+func SendRequest(method, apiEndpoint string, pathComponents []string, data interface{}) (*http.Response, error) {
 	httpClient := getClient()
 	// 构造 URL 路径
 	urlPath, err := url.JoinPath(apiEndpoint, pathComponents...)
@@ -57,6 +51,7 @@ func SendRequest(method, apiEndpoint string, pathComponents []string, data inter
 	}
 
 	// 创建 HTTP 请求
+	fmt.Printf("Request Path: %s\n", urlPath)
 	httpRequest, err := http.NewRequest(method, urlPath, body)
 	if err != nil {
 		return nil, err
@@ -68,13 +63,8 @@ func SendRequest(method, apiEndpoint string, pathComponents []string, data inter
 	if err != nil {
 		return nil, fmt.Errorf("error sending request: %v", err)
 	}
-	defer resp.Body.Close()
 
-	return &HttpResponse{
-		StatusCode: resp.StatusCode,
-		Headers:    resp.Header,
-		Body:       resp.Body,
-	}, nil
+	return resp, nil
 }
 
 func IsStringSet(s string) bool {
@@ -82,7 +72,7 @@ func IsStringSet(s string) bool {
 }
 
 // save response content to file
-func SaveResponseToFile(response *HttpResponse, outputFile string) error {
+func SaveResponseToFile(response *http.Response, outputFile string) error {
 	// create or open file
 	file, err := os.Create(outputFile)
 	if err != nil {
