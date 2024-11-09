@@ -8,31 +8,6 @@ import (
 	"github.com/bahamas0x00/kctl/pkg/common"
 )
 
-/*
-{
-  "name": "my-service",
-  "retries": 5,
-  "protocol": "http",
-  "host": "example.com",
-  "port": 80,
-  "path": "/some_api",
-  "connect_timeout": 6000,
-  "write_timeout": 6000,
-  "read_timeout": 6000,
-  "tags": [
-    "user-level"
-  ],
-  "client_certificate": {
-    "id": "4e3ad2e4-0bc4-4638-8e34-c84a417ba39b"
-  },
-  "tls_verify": true,
-  "tls_verify_depth": null,
-  "ca_certificates": [
-    "4e3ad2e4-0bc4-4638-8e34-c84a417ba39b"
-  ],
-  "enabled": true
-}
-*/
 // Service represents a single service in Kong Gateway.
 type Service struct {
 	Name              string   `json:"name"`            // Service name
@@ -54,19 +29,15 @@ type Service struct {
 	Enabled        bool     `json:"enabled"`          // Whether the service is enabled or not
 }
 
-// Services represents a response containing a list of services and pagination information.
-type Services struct {
-	Data   []Service `json:"data"`   // List of services
-	Offset string    `json:"offset"` // Pagination offset for the next set of results
-}
+type Services []Service
 
 // request path
-var pathComponents []string
 
 // list
 // 1. all services 								/services
 // 2. all services in a workspace				/{workspace}/services
 func ListAllServices(apiEndpoint, workspace string) (*http.Response, error) {
+	var pathComponents []string
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services")
 	} else {
@@ -79,6 +50,7 @@ func ListAllServices(apiEndpoint, workspace string) (*http.Response, error) {
 // 1. a service									/services
 // 2. a service in a workspace					/{workspace}/services
 func (s *Service) CreateService(apiEndpoint, workspace string) (*http.Response, error) {
+	var pathComponents []string
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services")
 	} else {
@@ -91,6 +63,7 @@ func (s *Service) CreateService(apiEndpoint, workspace string) (*http.Response, 
 // 1. a service									/services/{service_name}
 // 2. a service in a workspace					/{workspace}/services/{service_name}
 func (s *Service) DeleteService(apiEndpoint, workspace string) (*http.Response, error) {
+	var pathComponents []string
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services", s.Name)
 	} else {
@@ -103,6 +76,7 @@ func (s *Service) DeleteService(apiEndpoint, workspace string) (*http.Response, 
 // 1. a service									/services/{serviceName}
 // 2. a service in a workspace					/{workspace}/services/{serviceName}
 func (s *Service) UpdateService(apiEndpoint, workspace string) (*http.Response, error) {
+	var pathComponents []string
 	if common.IsStringSet(workspace) {
 		pathComponents = append(pathComponents, workspace, "services", s.Name)
 	} else {
@@ -113,23 +87,20 @@ func (s *Service) UpdateService(apiEndpoint, workspace string) (*http.Response, 
 
 // batch create services
 func (s *Services) BatchCreateServices(apiEndpoint, workspace string) ([]*http.Response, []error) {
-	services := common.ConvertToPointers(s.Data)
-	return batchExcuteServices(apiEndpoint, workspace, services, "create")
+	return batchExecuteServices(apiEndpoint, workspace, *s, "create")
 }
 
 // batch delete services
 func (s *Services) BatchDeleteServices(apiEndpoint, workspace string) ([]*http.Response, []error) {
-	services := common.ConvertToPointers(s.Data)
-	return batchExcuteServices(apiEndpoint, workspace, services, "delete")
+	return batchExecuteServices(apiEndpoint, workspace, *s, "delete")
 }
 
 // batch update services
 func (s *Services) BatchUpdateServices(apiEndpoint, workspace string) ([]*http.Response, []error) {
-	services := common.ConvertToPointers(s.Data)
-	return batchExcuteServices(apiEndpoint, workspace, services, "update")
+	return batchExecuteServices(apiEndpoint, workspace, *s, "update")
 }
 
-func batchExcuteServices(apiEndpoint string, workspace string, services []*Service, operation string) ([]*http.Response, []error) {
+func batchExecuteServices(apiEndpoint string, workspace string, services Services, operation string) ([]*http.Response, []error) {
 	var wg sync.WaitGroup
 	var responses []*http.Response
 	var errs []error
@@ -141,7 +112,7 @@ func batchExcuteServices(apiEndpoint string, workspace string, services []*Servi
 
 	for _, service := range services {
 		wg.Add(1)
-		go func(service *Service) {
+		go func(service Service) {
 			defer wg.Done()
 			var resp *http.Response
 			var err error
