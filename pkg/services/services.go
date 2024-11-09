@@ -37,11 +37,11 @@ type Services struct {
 // request path
 var pathComponents []string
 
-// list all services or list all services in a workspace
+// list
+// 1. all services 								/services
+// 2. all services in a workspace				/{workspace}/services
 func ListAllServices(apiEndpoint, workspace string) (*common.HttpResponse, error) {
 	if common.IsStringSet(workspace) {
-		// if workspace is set , request path is /{workspace}/services
-		// or request path is /services
 		pathComponents = append(pathComponents, workspace, "services")
 	} else {
 		pathComponents = append(pathComponents, "services")
@@ -49,11 +49,11 @@ func ListAllServices(apiEndpoint, workspace string) (*common.HttpResponse, error
 	return common.SendRequest("GET", apiEndpoint, pathComponents, nil)
 }
 
-// create a service or create a service in a workspace
+// create
+// 1. a service									/services
+// 2. a service in a workspace					/{workspace}/services
 func (s *Service) CreateService(apiEndpoint, workspace string) (*common.HttpResponse, error) {
 	if common.IsStringSet(workspace) {
-		// if workspace is set , request path is /{workspace}/services
-		// or request path is /services
 		pathComponents = append(pathComponents, workspace, "services")
 	} else {
 		pathComponents = append(pathComponents, "services")
@@ -61,11 +61,11 @@ func (s *Service) CreateService(apiEndpoint, workspace string) (*common.HttpResp
 	return common.SendRequest("POST", apiEndpoint, pathComponents, s)
 }
 
-// delete a service or delete a service in a workspace
+// delete
+// 1. a service									/services/{service_name}
+// 2. a service in a workspace					/{workspace}/services/{service_name}
 func (s *Service) DeleteService(apiEndpoint, workspace string) (*common.HttpResponse, error) {
 	if common.IsStringSet(workspace) {
-		// if workspace is set , request path is /{workspace}/services/{service_name}
-		// or request path is /services/{service_name}
 		pathComponents = append(pathComponents, workspace, "services", s.Name)
 	} else {
 		pathComponents = append(pathComponents, "services", s.Name)
@@ -74,7 +74,14 @@ func (s *Service) DeleteService(apiEndpoint, workspace string) (*common.HttpResp
 }
 
 // update a service or update a service in a workspace
+// 1. a service									/services/{serviceName}
+// 2. a service in a workspace					/{workspace}/services/{serviceName}
 func (s *Service) UpdateService(apiEndpoint, workspace string) (*common.HttpResponse, error) {
+	if common.IsStringSet(workspace) {
+		pathComponents = append(pathComponents, workspace, "services", s.Name)
+	} else {
+		pathComponents = append(pathComponents, "services", s.Name)
+	}
 	return common.SendRequest("PATCH", apiEndpoint, pathComponents, s)
 }
 
