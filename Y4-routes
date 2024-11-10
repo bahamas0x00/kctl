@@ -24,7 +24,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdapi_withdrawInfo_20c_60s"
@@ -52,7 +52,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdapi_orderlist_20c_60s"
@@ -80,7 +80,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "agentapi_60c_60s"
@@ -108,7 +108,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "agentapi_addBankCard_20c_60s"
@@ -136,7 +136,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_payOrder_historyExport_20c_60s"
@@ -164,7 +164,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdapi_recommendedExchange_20c_60s"
@@ -192,7 +192,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_manualScore_history_list_20c_60s"
@@ -220,7 +220,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_collectManage_collectDetails_list_20c_60s"
@@ -248,7 +248,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "actapi_60c_60s"
@@ -276,7 +276,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdapi_preRulelistV2_20c_60s"
@@ -304,7 +304,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "gamesite_betRecordList_12c_60s"
@@ -332,7 +332,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_callcenter_getJobInfoList_20c_60s"
@@ -360,7 +360,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "agentapi_setLoginPassword_20c_60s"
@@ -388,7 +388,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "act_user_recordMgr_dividendRecord_export_20c_60s"
@@ -416,7 +416,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_control_controlAccess_list_20c_60s"
@@ -444,7 +444,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "apisite_getOperationSponsoredConfigById_40c_60s"
@@ -472,7 +472,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_agentOrder_historyListAgent_20c_60s"
@@ -500,7 +500,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_withdraw_reviewList_20c_60s"
@@ -528,7 +528,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_fastDeposit_v1_exportRechargeProcessing_20c_60s"
@@ -556,7 +556,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_speedPayment_processingList_100c_60s"
@@ -584,7 +584,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "act_user_userDetail_rebateInfoList_30c_60s"
@@ -615,7 +615,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "sactapi_no_limit_frontendcall"
@@ -643,7 +643,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_export_financeSyncExport_20c_60s"
@@ -671,7 +671,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdapi_getDrawTypeInfo_20c_60s"
@@ -699,7 +699,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_user_finance_sendCommissionList_20c_60s"
@@ -727,7 +727,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdapi_bankList_40c_60s"
@@ -755,7 +755,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "apisite_nByhoeAyA4_10c_60s"
@@ -783,7 +783,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "agentapi_sendCodeNotLogin_20c_60s"
@@ -811,7 +811,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_agentOrder_exportAgent_20c_60s"
@@ -842,7 +842,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "apisite_no_limit_frontendcall"
@@ -870,7 +870,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_agencyRecharge_exportPayInfo_20c_60s"
@@ -898,7 +898,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "apisite_queryBannerList_40c_60s"
@@ -926,7 +926,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_finance_payment_historyExport_20c_60s"
@@ -954,7 +954,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_verifycode_chat_v1_message_userBanned_20c_60s"
@@ -982,7 +982,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "act_giftManage_auditing_list_export_20c_60s"
@@ -1010,7 +1010,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_verifycode_chat_v1_gift_record_list_20c_60s"
@@ -1038,7 +1038,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_console_withdraw_reviewList_20c_60s"
@@ -1066,7 +1066,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_fastDraw_v1_queryWithdrawProcessing_20c_60s"
@@ -1094,7 +1094,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_user_game_venueRecordAggregation_60c_60s"
@@ -1122,7 +1122,7 @@
             "headers": null,
             "regex_priority": 0,
             "tags": null,
-            "request_buffering": true,
+            "request_buffering": false,
             "response_buffering": true,
             "https_redirect_status_code": 301,
             "name": "fdcentral_no_limit"
