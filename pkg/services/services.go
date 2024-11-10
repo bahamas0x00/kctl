@@ -10,31 +10,29 @@ import (
 
 // Service represents a single service in Kong Gateway.
 type Service struct {
-	Name              string   `json:"name"`            // Service name
-	Retries           int      `json:"retries"`         // Number of retries on failure
-	Protocol          string   `json:"protocol"`        // Protocol used by the service (e.g., http, https)
-	Host              string   `json:"host"`            // Host address of the service
-	Port              int      `json:"port"`            // Port the service is listening on
-	Path              *string  `json:"path"`            // Path for the service
-	ConnectTimeout    int      `json:"connect_timeout"` // Timeout for establishing connections (in seconds)
-	WriteTimeout      int      `json:"write_timeout"`   // Timeout for writing data to the service (in seconds)
-	ReadTimeout       int      `json:"read_timeout"`    // Timeout for reading data from the service (in seconds)
-	Tags              []string `json:"tags"`            // Tags associated with the service
+	Name              string   `json:"name"`
+	Retries           int      `json:"retries"`
+	Protocol          string   `json:"protocol"`
+	Host              string   `json:"host"`
+	Port              int      `json:"port"`
+	Path              *string  `json:"path"`
+	ConnectTimeout    int      `json:"connect_timeout"`
+	WriteTimeout      int      `json:"write_timeout"`
+	ReadTimeout       int      `json:"read_timeout"`
+	Tags              []string `json:"tags"`
 	ClientCertificate *struct {
-		ID string `json:"id,omitempty"` // ID of the client certificate (optional)
+		ID string `json:"id,omitempty"`
 	} `json:"client_certificate"`
-	TlsVerify      *bool    `json:"tls_verify"`                // Whether to verify the TLS certificate
-	TlsVerifyDepth *int     `json:"tls_verify_depth"`          // Optional field for TLS verification depth
-	CaCertificates []string `json:"ca_certificates,omitempty"` // List of CA certificates
-	Enabled        bool     `json:"enabled"`                   // Whether the service is enabled or not
+	TlsVerify      *bool    `json:"tls_verify"`
+	TlsVerifyDepth *int     `json:"tls_verify_depth"`
+	CaCertificates []string `json:"ca_certificates,omitempty"`
+	Enabled        bool     `json:"enabled"`
 }
 
 type Services struct {
 	Next interface{}
 	Data []Service `json:"data"`
 }
-
-// request path
 
 // list
 // 1. all services 								/services

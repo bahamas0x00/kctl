@@ -42,10 +42,9 @@ var servicesGetCmd = &cobra.Command{
 			if err != nil {
 				return fmt.Errorf("failed to read data: %v", err)
 			}
-			fmt.Printf("Code: %s\n", resp.Status)
 			fmt.Printf("Response:\n%s\n", string(data))
 		}
-
+		fmt.Printf("workspace: %s", workspace)
 		return err
 	},
 }
@@ -58,11 +57,11 @@ var servicesCreateCmd = &cobra.Command{
 	Long:  `Create services or services in a workspace`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		var s services.Services
-		if common.IsStringSet(read) {
+		if common.IsStringSet(filePath) {
 			// read json from file
-			data, err := os.ReadFile(read)
+			data, err := os.ReadFile(filePath)
 			if err != nil {
-				return fmt.Errorf("failed to read file %s error: %v", read, err)
+				return fmt.Errorf("failed to read file %s error: %v", filePath, err)
 			}
 			err = json.Unmarshal(data, &s)
 			if err != nil {
@@ -70,18 +69,14 @@ var servicesCreateCmd = &cobra.Command{
 			}
 
 			// batch create services
-			responses, errs := s.BatchCreateServices(apiEndpoint, workspace)
+			_, errs := s.BatchCreateServices(apiEndpoint, workspace)
 			if len(errs) > 0 {
 				fmt.Println("there were some erros during create:")
 				for _, err := range errs {
 					return err
 				}
-			} else {
-				for _, resp := range responses {
-					fmt.Printf("Code: %s\n", resp.Status)
-				}
 			}
-
+			fmt.Printf("workspace: %s", workspace)
 			return nil
 
 		}
@@ -101,10 +96,10 @@ var servicesDeleteCmd = &cobra.Command{
 	Long:  `Delete services or services in workspace`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		var s services.Services
-		if common.IsStringSet(read) {
-			data, err := os.ReadFile(read)
+		if common.IsStringSet(filePath) {
+			data, err := os.ReadFile(filePath)
 			if err != nil {
-				return fmt.Errorf("failed to read file %s error: %v", read, err)
+				return fmt.Errorf("failed to read file %s error: %v", filePath, err)
 			}
 			err = json.Unmarshal(data, &s)
 			if err != nil {
@@ -120,7 +115,7 @@ var servicesDeleteCmd = &cobra.Command{
 				}
 			}
 
-			fmt.Printf("services clear done ! \nworkspace: %s", workspace)
+			fmt.Printf("workspace: %s", workspace)
 
 			return nil
 
@@ -139,7 +134,32 @@ var servicesUpdateCmd = &cobra.Command{
 	Short: "Update services",
 	Long:  `Update services or services in workspace`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return nil
+		var s services.Services
+		if common.IsStringSet(filePath) {
+			data, err := os.ReadFile(filePath)
+			if err != nil {
+				return fmt.Errorf("failed to read file %s error: %v", filePath, err)
+			}
+			err = json.Unmarshal(data, &s)
+			if err != nil {
+				return fmt.Errorf("not json file %v", err)
+			}
+
+			// batch update services
+			_, errs := s.BatchUpdateServices(apiEndpoint, workspace)
+			if len(errs) > 0 {
+				fmt.Println("there were some erros during update:")
+				for _, err := range errs {
+					return err
+				}
+			}
+
+			fmt.Printf("workspace: %s", workspace)
+
+			return nil
+
+		}
+		return fmt.Errorf("invalid command")
 	},
 }
 

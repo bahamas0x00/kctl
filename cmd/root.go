@@ -9,7 +9,12 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var apiEndpoint, workspace, output string
+var (
+	apiEndpoint string
+	workspace   string
+	filePath    string
+	serviceName string
+)
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -23,6 +28,7 @@ func Execute() {
 	if err != nil {
 		os.Exit(1)
 	}
+
 }
 
 func init() {
@@ -32,5 +38,4 @@ func init() {
 	rootCmd.AddCommand(deleteCmd)
 	rootCmd.PersistentFlags().StringVarP(&apiEndpoint, "api", "i", "http://localhost:8001", "Use -i to set the api endpoint")
 	rootCmd.PersistentFlags().StringVarP(&workspace, "workspace", "w", "", "Set the workspace")
-	rootCmd.PersistentFlags().StringVarP(&output, "output", "o", "", "Output to file ")
 }

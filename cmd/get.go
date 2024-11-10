@@ -7,6 +7,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var output string
+
 var getCmd = &cobra.Command{
 	Use:   "get",
 	Short: "Get resources (services, routes...)",
@@ -16,4 +18,5 @@ var getCmd = &cobra.Command{
 func init() {
 	getCmd.AddCommand(routesGetCmd)
 	getCmd.AddCommand(servicesGetCmd)
+	getCmd.PersistentFlags().StringVarP(&output, "output", "o", "", "Output to file ")
 }
