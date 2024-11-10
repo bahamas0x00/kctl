@@ -13,7 +13,6 @@ import (
 	"time"
 )
 
-
 var (
 	once   sync.Once
 	client *http.Client
@@ -89,8 +88,6 @@ func SaveResponseToFile(response *http.Response, outputFile string) error {
 		return fmt.Errorf("写入文件失败: %w", err)
 	}
 
-	fmt.Println("HTTP 响应状态码:", response.StatusCode)
+	fmt.Println("写入文件成功")
 	return nil
 }
-
-

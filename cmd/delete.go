@@ -9,8 +9,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var all string
-
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
 	Use:   "delete",
@@ -24,5 +22,5 @@ var deleteCmd = &cobra.Command{
 func init() {
 	deleteCmd.AddCommand(routesDeleteCmd)
 	deleteCmd.AddCommand(servicesDeleteCmd)
-	deleteCmd.PersistentFlags().StringVarP(&all, "all", "a", "", "Delete all ")
+	deleteCmd.PersistentFlags().StringVarP(&read, "read", "r", "", "read from file")
 }

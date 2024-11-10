@@ -14,8 +14,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var serviceName string
-
 // kctl get services
 // options:
 //
@@ -80,21 +78,15 @@ var servicesCreateCmd = &cobra.Command{
 				}
 			} else {
 				for _, resp := range responses {
-					defer resp.Body.Close()
-					body, err := io.ReadAll(resp.Body)
-					if err != nil {
-						fmt.Printf("failed to read body: %v", err)
-					}
 					fmt.Printf("Code: %s\n", resp.Status)
-					fmt.Printf("Response:\n%s\n", string(body))
 				}
 			}
 
-			return err
+			return nil
 
 		}
 
-		return fmt.Errorf("read file path is not set , use -r [filepath] ")
+		return fmt.Errorf("invalid command")
 	},
 }
 
@@ -102,14 +94,38 @@ var servicesCreateCmd = &cobra.Command{
 // options:
 //
 //	--workspace		-w 		delete in a workspace
-//	--all 			-a  	delete all services
-//	--serviceName   -sn 	Choose which service to delete
+//	--read          -r      delete list of services from file
 var servicesDeleteCmd = &cobra.Command{
 	Use:   "services",
 	Short: "Delete services",
 	Long:  `Delete services or services in workspace`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return nil
+		var s services.Services
+		if common.IsStringSet(read) {
+			data, err := os.ReadFile(read)
+			if err != nil {
+				return fmt.Errorf("failed to read file %s error: %v", read, err)
+			}
+			err = json.Unmarshal(data, &s)
+			if err != nil {
+				return fmt.Errorf("not json file %v", err)
+			}
+
+			// batch delete services
+			_, errs := s.BatchDeleteServices(apiEndpoint, workspace)
+			if len(errs) > 0 {
+				fmt.Println("there were some erros during delete:")
+				for _, err := range errs {
+					return err
+				}
+			}
+
+			fmt.Printf("services clear done ! \nworkspace: %s", workspace)
+
+			return nil
+
+		}
+		return fmt.Errorf("failed to read services list from file , plz set -r [filepath]")
 	},
 }
 
@@ -128,5 +144,5 @@ var servicesUpdateCmd = &cobra.Command{
 }
 
 func init() {
-	servicesDeleteCmd.PersistentFlags().StringVarP(&serviceName, "serviceName", "s", "", "Choose which service to delete")
+
 }

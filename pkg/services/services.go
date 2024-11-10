@@ -15,21 +15,24 @@ type Service struct {
 	Protocol          string   `json:"protocol"`        // Protocol used by the service (e.g., http, https)
 	Host              string   `json:"host"`            // Host address of the service
 	Port              int      `json:"port"`            // Port the service is listening on
-	Path              string   `json:"path"`            // Path for the service
+	Path              *string  `json:"path"`            // Path for the service
 	ConnectTimeout    int      `json:"connect_timeout"` // Timeout for establishing connections (in seconds)
 	WriteTimeout      int      `json:"write_timeout"`   // Timeout for writing data to the service (in seconds)
 	ReadTimeout       int      `json:"read_timeout"`    // Timeout for reading data from the service (in seconds)
 	Tags              []string `json:"tags"`            // Tags associated with the service
-	ClientCertificate struct {
-		ID string `json:"id"` // ID of the client certificate (optional)
+	ClientCertificate *struct {
+		ID string `json:"id,omitempty"` // ID of the client certificate (optional)
 	} `json:"client_certificate"`
-	TlsVerify      bool     `json:"tls_verify"`       // Whether to verify the TLS certificate
-	TlsVerifyDepth *int     `json:"tls_verify_depth"` // Optional field for TLS verification depth
-	CaCertificates []string `json:"ca_certificates"`  // List of CA certificates
-	Enabled        bool     `json:"enabled"`          // Whether the service is enabled or not
+	TlsVerify      *bool    `json:"tls_verify"`                // Whether to verify the TLS certificate
+	TlsVerifyDepth *int     `json:"tls_verify_depth"`          // Optional field for TLS verification depth
+	CaCertificates []string `json:"ca_certificates,omitempty"` // List of CA certificates
+	Enabled        bool     `json:"enabled"`                   // Whether the service is enabled or not
 }
 
-type Services []Service
+type Services struct {
+	Next interface{}
+	Data []Service `json:"data"`
+}
 
 // request path
 
@@ -108,9 +111,9 @@ func batchExecuteServices(apiEndpoint string, workspace string, services Service
 	ch := make(chan struct {
 		response *http.Response
 		err      error
-	}, len(services))
+	}, len(services.Data))
 
-	for _, service := range services {
+	for _, service := range services.Data {
 		wg.Add(1)
 		go func(service Service) {
 			defer wg.Done()
