@@ -65,6 +65,9 @@ func SendRequest(method, apiEndpoint string, pathComponents []string, data inter
 		return nil, fmt.Errorf("error sending request: %v", err)
 	}
 	fmt.Printf("Method: %s --> Request Path: %s --> response: %s\n", method, urlPath, resp.Status)
+	// for debug
+	// b, _ := io.ReadAll(resp.Body)
+	// fmt.Println(string(b))
 
 	return resp, nil
 }

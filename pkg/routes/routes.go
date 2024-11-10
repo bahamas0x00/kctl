@@ -14,9 +14,9 @@ type Route struct {
 	StripPath    bool        `json:"strip_path"`
 	Sources      interface{} `json:"sources"`
 	PreserveHost bool        `json:"preserve_host"`
-	Service      *struct {
-		ID string `json:"id"`
-	} `json:"service"`
+	// Service      *struct {
+	// 	ID string `json:"id"`
+	// } `json:"service"`
 	Destinations            interface{} `json:"destinations"`
 	Methods                 []string    `json:"methods"`
 	ID                      string      `json:"id"`
@@ -65,8 +65,17 @@ func ListAllRoutes(apiEndpoint, workspace string, serviceName string) (*http.Res
 // 3. a route associated with a service 						/services/{serviceName}/routes
 // 4. a route 													/routes
 func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
-
-	return nil, nil
+	var pathComponents []string
+	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
+		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes")
+	} else if common.IsStringSet(workspace) {
+		pathComponents = append(pathComponents, workspace, "routes")
+	} else if common.IsStringSet(serviceName) {
+		pathComponents = append(pathComponents, "services", serviceName, "routes")
+	} else {
+		pathComponents = append(pathComponents, "routes")
+	}
+	return common.SendRequest("POST", apiEndpoint, pathComponents, r)
 }
 
 // delete(DELETE)
@@ -75,8 +84,17 @@ func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (
 // 3. a route in a workspace									/{workspace}/routes/{routeName}
 // 4. a route associated with a service in a workspace			/{workspace}/services/{serviceName}/routes/{routeName}
 func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
-
-	return nil, nil
+	var pathComponents []string
+	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
+		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes", r.Name)
+	} else if common.IsStringSet(workspace) {
+		pathComponents = append(pathComponents, workspace, "routes", r.Name)
+	} else if common.IsStringSet(serviceName) {
+		pathComponents = append(pathComponents, "services", serviceName, "routes", r.Name)
+	} else {
+		pathComponents = append(pathComponents, "routes", r.Name)
+	}
+	return common.SendRequest("DELETE", apiEndpoint, pathComponents, nil)
 }
 
 // update (PATCH)
@@ -85,25 +103,35 @@ func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (
 // 3. a route in a workspace									/{workspace}/routes/{routeName}
 // 4. a route associated with a service in a workspace			/{workspace}/services/{serviceName}/routes/{routeName}
 func (r *Route) UpdateRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
-	return nil, nil
+	var pathComponents []string
+	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
+		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes", r.Name)
+	} else if common.IsStringSet(workspace) {
+		pathComponents = append(pathComponents, workspace, "routes", r.Name)
+	} else if common.IsStringSet(serviceName) {
+		pathComponents = append(pathComponents, "services", serviceName, "routes", r.Name)
+	} else {
+		pathComponents = append(pathComponents, "routes", r.Name)
+	}
+	return common.SendRequest("PATCH", apiEndpoint, pathComponents, r)
 }
 
 // batch create
 func (r *Routes) BatchCreateRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
-	return nil, nil
+	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "create")
 }
 
 // batch delete
 func (r *Routes) BatchDeleteServices(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
-	return nil, nil
+	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "delete")
 }
 
 // batch update
 func (r *Routes) BatchUpdateServices(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
-	return nil, nil
+	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "update")
 }
 
-func batchExcuteRoutes(apiEndpoint string, workspace string, serviceName string, routes []*Route, operation string) ([]*http.Response, []error) {
+func batchExecuteRoutes(apiEndpoint string, workspace string, serviceName string, routes Routes, operation string) ([]*http.Response, []error) {
 	var wg sync.WaitGroup
 	var responses []*http.Response
 	var errs []error
@@ -111,11 +139,11 @@ func batchExcuteRoutes(apiEndpoint string, workspace string, serviceName string,
 	ch := make(chan struct {
 		response *http.Response
 		err      error
-	}, len(routes))
+	}, len(routes.Data))
 
-	for _, route := range routes {
+	for _, route := range routes.Data {
 		wg.Add(1)
-		go func(route *Route) {
+		go func(route Route) {
 			defer wg.Done()
 			var resp *http.Response
 			var err error

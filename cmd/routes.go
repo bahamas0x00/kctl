@@ -4,8 +4,10 @@ Copyright © 2024 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
+	"os"
 
 	"github.com/bahamas0x00/kctl/pkg/common"
 	"github.com/bahamas0x00/kctl/pkg/routes"
@@ -48,8 +50,33 @@ var routesCreateCmd = &cobra.Command{
 	Short: "Create routes",
 	Long:  `Create routes `,
 	RunE: func(cmd *cobra.Command, args []string) error {
+		var r routes.Routes
+		if common.IsStringSet(filePath) {
+			// read json from file
+			data, err := os.ReadFile(filePath)
+			if err != nil {
+				return fmt.Errorf("failed to read file %s error: %v", filePath, err)
+			}
+			err = json.Unmarshal(data, &r)
+			if err != nil {
+				return fmt.Errorf("not json file %v", err)
+			}
 
-		return nil
+			// batch create services
+			_, errs := r.BatchCreateRoutes(apiEndpoint, workspace, serviceName)
+			if len(errs) > 0 {
+				fmt.Println("there were some erros during create:")
+				for _, err := range errs {
+					return err
+				}
+			}
+			fmt.Printf("workspace: %s\n", workspace)
+			fmt.Printf("associated service name: %s\n", serviceName)
+			return nil
+
+		}
+
+		return fmt.Errorf("invalid command")
 	},
 }
 
