@@ -122,12 +122,12 @@ func (r *Routes) BatchCreateRoutes(apiEndpoint, workspace string, serviceName st
 }
 
 // batch delete
-func (r *Routes) BatchDeleteServices(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
+func (r *Routes) BatchDeleteRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
 	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "delete")
 }
 
 // batch update
-func (r *Routes) BatchUpdateServices(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
+func (r *Routes) BatchUpdateRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
 	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "update")
 }
 

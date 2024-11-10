@@ -148,7 +148,7 @@ var servicesUpdateCmd = &cobra.Command{
 			// batch update services
 			_, errs := s.BatchUpdateServices(apiEndpoint, workspace)
 			if len(errs) > 0 {
-				fmt.Println("there were some erros during update:")
+				fmt.Println("There were some erros during update:")
 				for _, err := range errs {
 					return err
 				}

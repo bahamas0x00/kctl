@@ -1,7 +1,5 @@
 package common
 
-import "errors"
-
-var (
-	InvalidService = errors.New("")
-)
+// var (
+// 	InvalidService = errors.New("")
+// )

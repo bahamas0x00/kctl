@@ -68,6 +68,11 @@ func SendRequest(method, apiEndpoint string, pathComponents []string, data inter
 	// for debug
 	// b, _ := io.ReadAll(resp.Body)
 	// fmt.Println(string(b))
+	if resp.StatusCode >= 400 {
+		b, _ := io.ReadAll(resp.Body)
+
+		return nil, fmt.Errorf("bad request , response content: %s", b)
+	}
 
 	return resp, nil
 }

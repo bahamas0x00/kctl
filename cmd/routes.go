@@ -85,7 +85,31 @@ var routesDeleteCmd = &cobra.Command{
 	Short: "Delete routes",
 	Long:  `Delete routes`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return nil
+		var r routes.Routes
+		if common.IsStringSet(filePath) {
+			data, err := os.ReadFile(filePath)
+			if err != nil {
+				return fmt.Errorf("failed to read file %s error: %v", filePath, err)
+			}
+			err = json.Unmarshal(data, &r)
+			if err != nil {
+				return fmt.Errorf("not json file %v", err)
+			}
+
+			// batch delete services
+			_, errs := r.BatchDeleteRoutes(apiEndpoint, workspace, serviceName)
+			if len(errs) > 0 {
+				fmt.Println("there were some erros during delete:")
+				for _, err := range errs {
+					return err
+				}
+			}
+
+			fmt.Printf("workspace: %s", workspace)
+			fmt.Printf("associated service name: %s\n", serviceName)
+			return nil
+		}
+		return fmt.Errorf("invalid command")
 	},
 }
 
@@ -94,7 +118,32 @@ var routesUpdateCmd = &cobra.Command{
 	Short: "Update routes",
 	Long:  `Update routes`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return nil
+		var r routes.Routes
+		if common.IsStringSet(filePath) {
+			data, err := os.ReadFile(filePath)
+			if err != nil {
+				return fmt.Errorf("failed to read file %s error: %v", filePath, err)
+			}
+			err = json.Unmarshal(data, &r)
+			if err != nil {
+				return fmt.Errorf("not json file %v", err)
+			}
+
+			// batch update services
+			_, errs := r.BatchUpdateRoutes(apiEndpoint, workspace, serviceName)
+			if len(errs) > 0 {
+				fmt.Println("There were some erros during update:")
+				for _, err := range errs {
+					return err
+				}
+			}
+
+			fmt.Printf("workspace: %s", workspace)
+			fmt.Printf("associated service name: %s\n", serviceName)
+			return nil
+
+		}
+		return fmt.Errorf("invalid command")
 	},
 }
 

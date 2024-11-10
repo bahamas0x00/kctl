@@ -3,39 +3,11 @@
     "data": [
         {
             "paths": [
-                "/central/admin/fd/admin/v1/agencyRecharge/payHistoryInfo"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "01d1238b-4199-4e02-878d-9aa6c914d865",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_fd_admin_v1_agencyRecharge_payHistoryInfo_20c_60s"
-        },
-        {
-            "paths": [
                 "/fd/api/v1/withdraw/withdrawInfo"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -54,44 +26,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdapi_withdrawInfo_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/bankCard/queryMemberBanksInfoList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "03236dac-da3d-454f-a169-78eeaf932d4e",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_queryMemberBanksInfoList_40c_60s"
         },
         {
             "paths": [
                 "/fd/api/v1/vipCsConfig/order/list"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -110,16 +54,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdapi_orderlist_20c_60s"
         },
         {
             "paths": [
                 "/agent/api/"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -138,44 +82,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "agentapi_60c_60s"
-        },
-        {
-            "paths": [
-                "/site/api/v1/user/login"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "046bb45c-2350-462a-9c36-5b6ca14fc8cb",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "apisite_user_login_10c_60s"
         },
         {
             "paths": [
                 "/agent/api/v1/finance/draw/addBankCard"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -194,72 +110,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "agentapi_addBankCard_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/speedPayment/historyTotalAm"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "064d8f72-5f72-47ab-8a4b-911b358ae6f5",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_speedPayment_historyTotalAm_15c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/manualScore/mid/member/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "06500291-43fa-4127-bfbb-c15d9f210082",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_manualScore_mid_member_list_60c_60s"
         },
         {
             "paths": [
                 "/fdcentral/admin/fd/instation/v1/payOrder/historyExport"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -278,16 +138,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_payOrder_historyExport_20c_60s"
         },
         {
             "paths": [
                 "/fd/api/v1/payment/recommendedExchange"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -306,72 +166,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdapi_recommendedExchange_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/system/siteAccessManage/loginlog"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "08d13f05-49b2-453d-9245-cc0b7995731c",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_system_siteAccessManage_loginlog_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/payOrder/historyList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "0a0e0641-00ea-4110-bae0-ce65e9e6b327",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_payOrder_historyList_60c_60s"
         },
         {
             "paths": [
                 "/central/admin/fd/admin/v1/manualScore/history/list"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -390,16 +194,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_manualScore_history_list_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/site/admin/v1/collectManage/collectDetails/list"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -418,75 +222,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_collectManage_collectDetails_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/agentOrder/listAgentPay"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "0ce80f65-792b-4860-b7c9-cee758d6f071",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_agentOrder_listAgentPay_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "0ceb318c-cd89-457d-aa1f-81b42ff77b93",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": [
-                "k4txy.com",
-                "api.tu85ra.com"
-            ],
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_no_limit_frontendcall"
         },
         {
             "paths": [
                 "/act/api/"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -505,16 +250,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "actapi_60c_60s"
         },
         {
             "paths": [
                 "/fd/api/v1/withdraw/preRule/listV2"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -533,72 +278,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdapi_preRulelistV2_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/tags/delete"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "16e38555-6441-40a9-8ff5-6c946f68a881",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_tagsdelete_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/vCurrency/koiPay/app/address"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "1850ee14-421d-4d53-9199-96f11aa72fcb",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_koiPayaddress_20c_60s"
         },
         {
             "paths": [
                 "/game/api/v1/record/betRecordList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -617,44 +306,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "gamesite_betRecordList_12c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/payOrder/payHistoryInfoExport"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "1c1a2e63-be18-4333-b0b7-d209a49831c7",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_payOrder_payHistoryInfoExport_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/site/admin/v1/callcenter/getJobInfoList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -673,16 +334,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_callcenter_getJobInfoList_20c_60s"
         },
         {
             "paths": [
                 "/agent/api/v1/member/setLoginPassword"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -701,145 +362,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "agentapi_setLoginPassword_20c_60s"
-        },
-        {
-            "paths": [
-                "/teasdifjisdf"
-            ],
-            "updated_at": 1731241567,
-            "strip_path": true,
-            "created_at": 1731241567,
-            "sources": null,
-            "preserve_host": true,
-            "service": {
-                "id": "4a547e8f-f416-4fc9-b519-d6decb4bd2c0"
-            },
-            "destinations": null,
-            "methods": [
-                "GET",
-                "PUT",
-                "POST",
-                "PATCH",
-                "DELETE",
-                "OPTIONS",
-                "HEAD",
-                "CONNECT",
-                "TRACE",
-                "SDFDSF"
-            ],
-            "id": "1d768baa-fa24-406f-8b68-184833076891",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": [
-                "test.com"
-            ],
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": [
-                "asdfadf"
-            ],
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "testroute"
-        },
-        {
-            "paths": [
-                "/central/admin/fd/admin/v1/withdraw/historyList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "1e03731f-91a1-4108-a1a8-4630ff6db36a",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_fd_admin_v1_withdraw_historyList_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/verifycode/chat/v1/msgReport/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "20397d9c-f405-42d7-8174-d7d176ffa665",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_verifycode_chat_v1_msgReport_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/reply/v1/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "2199be1b-ce7e-4dfd-a73b-2532ba8a836e",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_reply_v1_list_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/act/admin/v1/user/recordMgr/dividendRecord/export"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -858,16 +390,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "act_user_recordMgr_dividendRecord_export_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/site/admin/v1/control/controlAccess/list"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -886,72 +418,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_control_controlAccess_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/agent/admin/v1/agent/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "25eb8011-f560-4b0a-bc08-2bc4285d8315",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agent_agent_list_30c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/fd/admin/v1/manualScore/history/list/export"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "261fad32-9851-4f61-aa6a-c1b2102c45a9",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_fd_admin_v1_manualScore_history_list_export_20c_60s"
         },
         {
             "paths": [
                 "/site/api/v1/advertising/getOperationSponsoredConfigById"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -970,16 +446,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "apisite_getOperationSponsoredConfigById_40c_60s"
         },
         {
             "paths": [
                 "/fdcentral/admin/fd/instation/v1/agentOrder/historyListAgent"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -998,16 +474,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_agentOrder_historyListAgent_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/fd/admin/v1/withdraw/reviewList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1026,48 +502,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_withdraw_reviewList_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/",
-                "/page/fd/"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "288bdab8-b154-4c18-8c83-440a11ea6dfe",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": [
-                "k4txy.com",
-                "api.tu85ra.com"
-            ],
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_no_limit_frontendcall"
         },
         {
             "paths": [
                 "/central/admin/fd/admin/v1/fastDeposit/v1/exportRechargeProcessing"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1086,72 +530,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_fastDeposit_v1_exportRechargeProcessing_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/tags/edit"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "2d6d580b-bdf7-43c8-b04c-76381a4d474a",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_tagsedit_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/speedPayment/processingTotalAm"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "2e06cedd-9a6c-46e2-928e-a1b9aa08e23c",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_speedPayment_processingTotalAm_60c_60s"
         },
         {
             "paths": [
                 "/fdcentral/admin/fd/instation/v1/speedPayment/processingList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1170,44 +558,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_speedPayment_processingList_100c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/user/adjuestAudit/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "2e5bb9ae-29e3-4402-9998-6850bac9241e",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_user_adjuestAudit_list_70c_60s"
         },
         {
             "paths": [
                 "/central/admin/act/admin/v1/user/userDetail/rebateInfoList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1226,16 +586,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "act_user_userDetail_rebateInfoList_30c_60s"
         },
         {
             "paths": [
                 "/sact/api/"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1257,128 +617,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "sactapi_no_limit_frontendcall"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/thirdPayOrder/historyListSF"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "36e46a51-5f10-447d-8083-b9d9730a209f",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_thirdPayOrder_historyListSF_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/bankCard/deleteMemberBanks"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "376caac0-c86f-4525-ae4a-e9dceaf1fd00",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_deleteMemberBanks_10c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/thirdPayOrder/historyExportSF"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "3779c6f0-7ba9-4357-80b8-3178e84d1fb0",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_thirdPayOrder_historyExportSF_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/verifycode/admin/v1/notice/history"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "39ee2244-59be-443b-b8b7-920adf17c135",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_verifycode_admin_v1_notice_history_20c_60s"
         },
         {
             "paths": [
                 "/fdcentral/admin/fd/instation/v1/export/financeSyncExport"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1397,128 +645,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_export_financeSyncExport_20c_60s"
-        },
-        {
-            "paths": [
-                "/game/api/"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "3b489761-d126-4ce1-94a1-127d1107ce5b",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "gameapi_60c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/callcenter/callBackList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "3bbb2756-a1b1-4386-b79a-aa0ce2ec03e2",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_callcenter_callBackList_20c_60s"
-        },
-        {
-            "paths": [
-                "/site/api/"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "3d017c6a-68e0-47eb-8cc7-f578601a473f",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "apisite_60c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/member/memberBitCoinInfo/v1/findAll"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "3e27e727-f37e-426d-8d58-3484d6cad0d2",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_member_memberBitCoinInfo_v1_findAll_40c_60s"
         },
         {
             "paths": [
                 "/fd/api/v1/speedDraw/getDrawTypeInfo"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1537,16 +673,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdapi_getDrawTypeInfo_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/site/admin/v1/user/finance/sendCommissionList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1565,22 +701,22 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_user_finance_sendCommissionList_20c_60s"
         },
         {
             "paths": [
                 "/fd/api/v1/payment/bankList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
             "destinations": null,
             "methods": null,
-            "id": "42665c1e-6efa-4145-954e-9288cecd290b",
+            "id": "30165c1e-6efa-4145-954e-9288cecd290b",
             "path_handling": "v0",
             "protocols": [
                 "http",
@@ -1593,44 +729,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdapi_bankList_40c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/act/admin/v1/giftManage/deliver/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "431ce3f4-2e33-4159-8123-1bed1caac58d",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "act_giftManage_deliver_list_20c_60s"
         },
         {
             "paths": [
                 "/site/api/v1/sec/nByhoeAyA4"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1649,100 +757,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "apisite_nByhoeAyA4_10c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/member/rechargePassword"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "472615a4-71c4-4b71-86fd-4a1f286dd3ad",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_rechargePassword_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/system/push/record/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "4b33d766-b3c7-488d-bb65-bc9b264b4222",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_system_push_record_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/collectManage/collectRecord/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "4c6d8706-20d2-479c-bf25-13053e1824e4",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_collectManage_collectRecord_list_20c_60s"
         },
         {
             "paths": [
                 "/agent/api/v1/member/sendCodeNotLogin"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1761,72 +785,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "agentapi_sendCodeNotLogin_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/vCurrency/usdtWithdrawInfo"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "4ce3c7e7-a86c-499d-8b27-3a0e412b3e94",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_usdtWithdrawInfo_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/operation/shortMsg/getDetailList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "4e1c822d-50b5-40eb-8609-a71ae0d33582",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_operation_shortMsg_getDetailList_20c_60s"
         },
         {
             "paths": [
                 "/fdcentral/admin/fd/instation/v1/agentOrder/exportAgent"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1845,72 +813,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_agentOrder_exportAgent_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/member/updatePassword"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "4f820777-42fa-411a-8261-b7aab1f7ea09",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_updatePassword_20c_60s"
-        },
-        {
-            "paths": [
-                "/site/api/v1/advertising/queryNoticeListByPage"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "50af0c8d-ee73-4a98-a5eb-fb7f09d8d1b7",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "apisite_queryNoticeListByPage_40c_60s"
         },
         {
             "paths": [
                 "/site/api/"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1932,16 +844,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "apisite_no_limit_frontendcall"
         },
         {
             "paths": [
                 "/central/admin/fd/admin/v1/agencyRecharge/exportPayInfo"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -1960,128 +872,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_agencyRecharge_exportPayInfo_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/vCurrency/eBPay/app/address"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "544969a6-dc5d-495e-b18c-78f7caa8da29",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_eBPayaddress_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/communicate/reply"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "56b3e1a4-2fac-4ad6-98b2-0026382dbe51",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_communicatereply_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/payOrder/export"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "57d75a8d-1a7c-4fdf-b6d1-58dc5e4fa764",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_payOrder_export_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/tags/add"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "59cae2a7-a8d9-4607-9b7b-5bd7c250909e",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_tagsadd_20c_60s"
         },
         {
             "paths": [
                 "/site/api/v1/advertising/queryBannerList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2100,100 +900,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "apisite_queryBannerList_40c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/vCurrency/checkSupportUsdt"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "5b9d29e1-e5e7-40b9-8411-eaa3a91d056d",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_checkSupportUsdt_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/agent/admin/v1/commission/team/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "5dcae020-0503-40c8-8093-64ab837f33ed",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agent_commission_team_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/fd/admin/v1/finance/payment/agentHistoryExport"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "5edc0d38-72ec-443d-b251-7b0d0c53f78c",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_fd_admin_v1_finance_payment_agentHistoryExport_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/fd/admin/v1/finance/payment/historyExport"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2212,72 +928,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_finance_payment_historyExport_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/agent/admin/v1/draw/list"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "5fdee820-9a4b-454a-8242-959cacea5937",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agent_draw_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/speedPayment/historyList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "614ebaea-68ab-4098-a5e3-ab24b6e8e880",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_speedPayment_historyList_15c_60s"
         },
         {
             "paths": [
                 "/central/admin/verifycode/chat/v1/message/userBanned"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2296,72 +956,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_verifycode_chat_v1_message_userBanned_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/collectManage/collectRecord/stat"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "62bd2220-e22b-49ae-99e9-82e3ef86ea3c",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_collectManage_collectRecord_stat_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/system/siteAccessManage/sensitiveLog"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "631cf164-eceb-4551-bfbc-dab10a3dcd67",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_system_siteAccessManage_sensitiveLog_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/act/admin/v1/giftManage/auditing/list/export"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2380,103 +984,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "act_giftManage_auditing_list_export_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/admin/fd/instation/v1/speedWithdraw/exportHistoryList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "6458c750-c42d-4728-acfe-ea8cda455f30",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentral_admin_fd_instation_v1_speedWithdraw_exportHistoryList_20c_60s"
-        },
-        {
-            "paths": [
-                "/fdcentral/"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "648d2cc7-8135-4471-91b9-d5d178c0d2fd",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": [
-                "k4txy.com",
-                "api.tu85ra.com"
-            ],
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdcentralsite_no_limit_frontendcall"
-        },
-        {
-            "paths": [
-                "/central/admin/act/admin/v1/user/userDetail/rebateInfoListExport"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "65e222f3-7bf4-408e-911f-239daa5290dd",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "act_user_userDetail_rebateInfoListExport_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/verifycode/chat/v1/gift/record/list"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2495,156 +1012,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_verifycode_chat_v1_gift_record_list_20c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/system/siteAccessManage/operaterlogV2"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "6879547f-a1c7-4b4c-b45f-79112f0b761d",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_system_siteAccessManage_operaterlogV2_30c_60s"
-        },
-        {
-            "paths": [
-                "/central/admin/site/admin/v1/user/finance/agentDepositList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "69acd84b-ec0e-4ba7-ae9c-dd61082c20c5",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_site_admin_v1_user_finance_agentDepositList_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/member/bindPhone"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "69c07c73-de7b-4a7f-b2d6-c4326ad616f9",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_bindPhone_20c_60s"
-        },
-        {
-            "paths": [
-                "/agent/api/v1/finance/edu/lastUnfinishedAgent"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "6a259048-1880-4390-a45c-783eaaa74d04",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "agentapi_lastUnfinishedAgent_20c_60s"
-        },
-        {
-            "paths": [
-                "/fd/api/v1/transactions/queryDealRecord"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "6b53948b-5f82-45e3-973f-4241f06e81aa",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "fdapi_queryDealRecord_20c_60s"
         },
         {
             "paths": [
                 "/fdcentral/admin/fd/instation/v1/console/withdraw/reviewList"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2663,16 +1040,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_admin_fd_instation_v1_console_withdraw_reviewList_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/fd/admin/v1/fastDraw/v1/queryWithdrawProcessing"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2691,16 +1068,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_fd_admin_v1_fastDraw_v1_queryWithdrawProcessing_20c_60s"
         },
         {
             "paths": [
                 "/central/admin/site/admin/v1/user/game/venueRecordAggregation"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2719,16 +1096,16 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "central_admin_site_admin_v1_user_game_venueRecordAggregation_60c_60s"
         },
         {
             "paths": [
                 "/fdcentral/"
             ],
-            "updated_at": 1731244138,
+            "updated_at": 1731245281,
             "strip_path": false,
-            "created_at": 1731244138,
+            "created_at": 1731245281,
             "sources": null,
             "preserve_host": false,
             "service": null,
@@ -2747,36 +1124,8 @@
             "tags": null,
             "request_buffering": true,
             "response_buffering": true,
-            "https_redirect_status_code": 426,
+            "https_redirect_status_code": 301,
             "name": "fdcentral_no_limit"
-        },
-        {
-            "paths": [
-                "/central/admin/fd/admin/v1/finance/payment/agentHistoryList"
-            ],
-            "updated_at": 1731244138,
-            "strip_path": false,
-            "created_at": 1731244138,
-            "sources": null,
-            "preserve_host": false,
-            "service": null,
-            "destinations": null,
-            "methods": null,
-            "id": "721ac650-d920-4029-8afd-cdd3ecb3eb55",
-            "path_handling": "v0",
-            "protocols": [
-                "http",
-                "https"
-            ],
-            "hosts": null,
-            "snis": null,
-            "headers": null,
-            "regex_priority": 0,
-            "tags": null,
-            "request_buffering": true,
-            "response_buffering": true,
-            "https_redirect_status_code": 426,
-            "name": "central_admin_fd_admin_v1_finance_payment_agentHistoryList_20c_60s"
         }
     ]
 }
