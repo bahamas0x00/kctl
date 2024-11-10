@@ -13,8 +13,11 @@ import (
 	"time"
 )
 
-var once sync.Once
-var client *http.Client
+
+var (
+	once   sync.Once
+	client *http.Client
+)
 
 // return a http client
 func getClient() *http.Client {
@@ -90,11 +93,4 @@ func SaveResponseToFile(response *http.Response, outputFile string) error {
 	return nil
 }
 
-// Convert a slice of any struct type to a slice of pointers to those structs
-func ConvertToPointers[T any](data []T) []*T {
-	pointers := make([]*T, len(data))
-	for i := range data {
-		pointers[i] = &data[i]
-	}
-	return pointers
-}
+
