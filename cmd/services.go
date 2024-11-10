@@ -125,7 +125,7 @@ var servicesDeleteCmd = &cobra.Command{
 			return nil
 
 		}
-		return fmt.Errorf("failed to read services list from file , plz set -r [filepath]")
+		return fmt.Errorf("invalid command")
 	},
 }
 

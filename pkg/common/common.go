@@ -52,8 +52,9 @@ func SendRequest(method, apiEndpoint string, pathComponents []string, data inter
 		body = bytes.NewBuffer(bodyData)
 	}
 
+	fmt.Printf("Method: %s --> Request Path: %s\n", method, urlPath)
+
 	// 创建 HTTP 请求
-	fmt.Printf("Request Path: %s\n", urlPath)
 	httpRequest, err := http.NewRequest(method, urlPath, body)
 	if err != nil {
 		return nil, err
