@@ -17,5 +17,6 @@ var deleteCmd = &cobra.Command{
 func init() {
 	deleteCmd.AddCommand(routesDeleteCmd)
 	deleteCmd.AddCommand(servicesDeleteCmd)
+	deleteCmd.AddCommand(upstreamsDeleteCmd)
 	deleteCmd.PersistentFlags().StringVarP(&filePath, "file", "f", "", "Read from file (json)")
 }

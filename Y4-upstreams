@@ -1,0 +1,107 @@
+{
+    "next": null,
+    "data": [
+        {
+            "hash_fallback_header": null,
+            "hash_fallback_query_arg": null,
+            "id": "44781941-63e3-4964-97a2-7ed93c1f19d2",
+            "hash_on_header": null,
+            "hash_on_query_arg": null,
+            "slots": 10000,
+            "created_at": 1731313895,
+            "use_srv_name": false,
+            "algorithm": "consistent-hashing",
+            "updated_at": 1731313895,
+            "hash_on_uri_capture": null,
+            "healthchecks": {
+                "active": {
+                    "timeout": 1,
+                    "http_path": "/",
+                    "unhealthy": {
+                        "timeouts": 121,
+                        "http_failures": 5,
+                        "http_statuses": [
+                            429,
+                            404,
+                            500,
+                            501,
+                            502,
+                            503,
+                            504,
+                            505
+                        ],
+                        "interval": 5,
+                        "tcp_failures": 5
+                    },
+                    "https_verify_certificate": true,
+                    "headers": {
+                        "sdf": [
+                            "sdfdsf"
+                        ]
+                    },
+                    "concurrency": 10,
+                    "type": "http",
+                    "healthy": {
+                        "http_statuses": [
+                            200,
+                            302,
+                            100,
+                            101,
+                            102
+                        ],
+                        "interval": 5,
+                        "successes": 5
+                    },
+                    "https_sni": null
+                },
+                "threshold": 3,
+                "passive": {
+                    "type": "http",
+                    "unhealthy": {
+                        "timeouts": 5,
+                        "http_failures": 100,
+                        "http_statuses": [
+                            429,
+                            500,
+                            503
+                        ],
+                        "tcp_failures": 5
+                    },
+                    "healthy": {
+                        "successes": 80,
+                        "http_statuses": [
+                            200,
+                            201,
+                            202,
+                            203,
+                            204,
+                            205,
+                            206,
+                            207,
+                            208,
+                            226,
+                            300,
+                            301,
+                            302,
+                            303,
+                            304,
+                            305,
+                            306,
+                            307,
+                            308
+                        ]
+                    }
+                }
+            },
+            "client_certificate": null,
+            "host_header": "sdfsdf",
+            "hash_on_cookie": null,
+            "name": "testUpstream",
+            "tags": null,
+            "hash_fallback_uri_capture": null,
+            "hash_on": "consumer",
+            "hash_on_cookie_path": "/",
+            "hash_fallback": "ip"
+        }
+    ]
+}

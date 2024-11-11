@@ -18,5 +18,6 @@ var getCmd = &cobra.Command{
 func init() {
 	getCmd.AddCommand(routesGetCmd)
 	getCmd.AddCommand(servicesGetCmd)
+	getCmd.AddCommand(upstreamsGetCmd)
 	getCmd.PersistentFlags().StringVarP(&output, "output", "o", "", "Output to file ")
 }

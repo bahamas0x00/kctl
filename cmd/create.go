@@ -16,6 +16,7 @@ var createCmd = &cobra.Command{
 func init() {
 	createCmd.AddCommand(routesCreateCmd)
 	createCmd.AddCommand(servicesCreateCmd)
+	createCmd.AddCommand(upstreamsCreateCmd)
 	createCmd.PersistentFlags().StringVarP(&filePath, "file", "f", "", "Read from file (json)")
 
 }
