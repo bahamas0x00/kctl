@@ -35,8 +35,8 @@ type Route struct {
 
 // Routes represents the response for a list of routes in Kong API
 type Routes struct {
-	Data []Route `json:"data"` // List of routes
-	Next *string `json:"next"` // Pagination offset
+	Data []Route     `json:"data"`
+	Next interface{} `json:"next"`
 }
 
 // list(GET)

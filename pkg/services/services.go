@@ -30,8 +30,8 @@ type Service struct {
 }
 
 type Services struct {
-	Next interface{}
-	Data []Service `json:"data"`
+	Next interface{} `json:"next"`
+	Data []Service   `json:"data"`
 }
 
 // list
