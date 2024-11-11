@@ -10,10 +10,11 @@ import (
 )
 
 var (
-	apiEndpoint string
-	workspace   string
-	filePath    string
-	serviceName string
+	apiEndpoint  string
+	workspace    string
+	filePath     string
+	serviceName  string
+	upstreamName string
 )
 
 // rootCmd represents the base command when called without any subcommands

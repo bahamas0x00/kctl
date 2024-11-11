@@ -17,6 +17,7 @@ func init() {
 	createCmd.AddCommand(routesCreateCmd)
 	createCmd.AddCommand(servicesCreateCmd)
 	createCmd.AddCommand(upstreamsCreateCmd)
+	createCmd.AddCommand(targetsCreateCmd)
 	createCmd.PersistentFlags().StringVarP(&filePath, "file", "f", "", "Read from file (json)")
 
 }

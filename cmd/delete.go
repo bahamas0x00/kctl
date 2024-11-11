@@ -18,5 +18,6 @@ func init() {
 	deleteCmd.AddCommand(routesDeleteCmd)
 	deleteCmd.AddCommand(servicesDeleteCmd)
 	deleteCmd.AddCommand(upstreamsDeleteCmd)
+	deleteCmd.AddCommand(targetsDeleteCmd)
 	deleteCmd.PersistentFlags().StringVarP(&filePath, "file", "f", "", "Read from file (json)")
 }

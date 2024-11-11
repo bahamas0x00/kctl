@@ -19,5 +19,6 @@ func init() {
 	getCmd.AddCommand(routesGetCmd)
 	getCmd.AddCommand(servicesGetCmd)
 	getCmd.AddCommand(upstreamsGetCmd)
+	getCmd.AddCommand(targetsGetCmd)
 	getCmd.PersistentFlags().StringVarP(&output, "output", "o", "", "Output to file ")
 }

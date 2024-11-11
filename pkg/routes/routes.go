@@ -44,7 +44,7 @@ type Routes struct {
 // 2. all routes in a workspace 								/{workspace}/routes
 // 3. all routes associated with a service 						/services/{serviceName}/routes
 // 4. all routes 												/routes
-func ListAllRoutes(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
+func ListAllRoutes(apiEndpoint, workspace, serviceName string) (*http.Response, error) {
 	var pathComponents []string
 	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
 		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes")
@@ -64,7 +64,7 @@ func ListAllRoutes(apiEndpoint, workspace string, serviceName string) (*http.Res
 // 2. a route in a workspace 									/{workspace}/routes
 // 3. a route associated with a service 						/services/{serviceName}/routes
 // 4. a route 													/routes
-func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
+func (r *Route) CreateRoute(apiEndpoint, workspace, serviceName string) (*http.Response, error) {
 	var pathComponents []string
 	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
 		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes")
@@ -83,7 +83,7 @@ func (r *Route) CreateRoute(apiEndpoint, workspace string, serviceName string) (
 // 2. a route associated with a service							/services/{serviceName}/routes/{routeName}
 // 3. a route in a workspace									/{workspace}/routes/{routeName}
 // 4. a route associated with a service in a workspace			/{workspace}/services/{serviceName}/routes/{routeName}
-func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
+func (r *Route) DeleteRoute(apiEndpoint, workspace, serviceName string) (*http.Response, error) {
 	var pathComponents []string
 	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
 		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes", r.Name)
@@ -102,7 +102,7 @@ func (r *Route) DeleteRoute(apiEndpoint, workspace string, serviceName string) (
 // 2. a route associated with a service							/services/{serviceName}/routes/{routeName}
 // 3. a route in a workspace									/{workspace}/routes/{routeName}
 // 4. a route associated with a service in a workspace			/{workspace}/services/{serviceName}/routes/{routeName}
-func (r *Route) UpdateRoute(apiEndpoint, workspace string, serviceName string) (*http.Response, error) {
+func (r *Route) UpdateRoute(apiEndpoint, workspace, serviceName string) (*http.Response, error) {
 	var pathComponents []string
 	if common.IsStringSet(workspace) && common.IsStringSet(serviceName) {
 		pathComponents = append(pathComponents, workspace, "services", serviceName, "routes", r.Name)
@@ -117,21 +117,21 @@ func (r *Route) UpdateRoute(apiEndpoint, workspace string, serviceName string) (
 }
 
 // batch create
-func (r *Routes) BatchCreateRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
+func (r *Routes) BatchCreateRoutes(apiEndpoint, workspace, serviceName string) ([]*http.Response, []error) {
 	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "create")
 }
 
 // batch delete
-func (r *Routes) BatchDeleteRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
+func (r *Routes) BatchDeleteRoutes(apiEndpoint, workspace, serviceName string) ([]*http.Response, []error) {
 	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "delete")
 }
 
 // batch update
-func (r *Routes) BatchUpdateRoutes(apiEndpoint, workspace string, serviceName string) ([]*http.Response, []error) {
+func (r *Routes) BatchUpdateRoutes(apiEndpoint, workspace, serviceName string) ([]*http.Response, []error) {
 	return batchExecuteRoutes(apiEndpoint, workspace, serviceName, *r, "update")
 }
 
-func batchExecuteRoutes(apiEndpoint string, workspace string, serviceName string, routes Routes, operation string) ([]*http.Response, []error) {
+func batchExecuteRoutes(apiEndpoint, workspace, serviceName string, routes Routes, operation string) ([]*http.Response, []error) {
 	var wg sync.WaitGroup
 	var responses []*http.Response
 	var errs []error
