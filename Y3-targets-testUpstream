@@ -1,0 +1,17 @@
+{
+    "next": null,
+    "data": [
+        {
+            "id": "2961ccb0-b65e-4689-a6b2-322e68994b2b",
+            "updated_at": 1731315742.434,
+            "weight": 10,
+            "created_at": 1731315742.434,
+            "upstream": {
+                "id": "44781941-63e3-4964-97a2-7ed93c1f19d2"
+            },
+            "tags": ["1", "2","3"],
+            "target": "localhost:8000"
+        }
+        
+    ]
+}

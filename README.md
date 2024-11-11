@@ -9,11 +9,17 @@
                 ||----w |
                 ||     ||
 ```
-
-CLI for Kong Gateway Admin api management
+ 
+### CLI for Kong Gateway Admin api management
 
 功能：  
 1. 批量获取
 2. 批量创建
 3. 批量更新
-4. 删除所有/单个资源
+4. 批量删除
+
+### Build  
+```
+GOOS=linux GOARCH=amd64 go build -o bin/kctl_amd64
+GOOS=darwin GOARCH=arm64 go build -o bin/kctl_arm64
+```
